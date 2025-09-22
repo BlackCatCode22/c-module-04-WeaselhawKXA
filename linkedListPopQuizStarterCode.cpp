@@ -1,5 +1,5 @@
 // linkedListPopQuizStarterCode.cpp
-// dH 9/20/25
+// 0836901 Le 22 sept 2025
 
 #include <iostream>
 #include <string>
@@ -11,7 +11,7 @@ struct node {
     node* next;
 };
 
-int mXXn() {
+int main() {
     cout << "\n    *********** Hello and welcome to the linked list pop quiz! *****************\n";
 
     // Create a string named myStr and initialize it to "abc"
@@ -70,7 +70,7 @@ int mXXn() {
 
     // TODO: Complete the following code snippet
     // Find myStr's length
-
+    cout << myStr.length() << endl;
 
 
     // What is wrong with this code?
@@ -89,7 +89,8 @@ int mXXn() {
         cout << "\n Linked list data: " << myNode->data << endl;
         delete myNode;
     }
-
+    //[What is this? And what does it do?]
+    //[It looks like it's creating a new node and terminating the new node after outputting its data.]
 
     // Create the linked list using a for loop
 
@@ -114,13 +115,17 @@ int mXXn() {
         //
         // Step 4: Reposition head of list
         //
+        pCurrent=new node;
+        pCurrent->data='i';
+        pCurrent->next=pHead;
+        pHead=pCurrent;
     }
 
     // Output the linked list!
     // Ensure pHead and pCurrent are both pointing to the head of the list
     // TODO: Complete these C++ statements:
-    cout << "\n pHead's data: " << "__________" << endl;
-    cout << "\n pCurrent's data: " << "____________" << endl;
+    cout << "\n pHead's data: " << pHead->data << endl;
+    cout << "\n pCurrent's data: " << pCurrent->data << endl;
 
     // Use a while loop to get the size of the list
     // Remember: the loop control variable must be initialized, checked, and changed.
